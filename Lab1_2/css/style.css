@@ -23,13 +23,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 0 10px 2px #aaa;
+    box-shadow: 0 0 10px 2px #444;
     padding: 20px 120px;
     z-index: 1;
 }
 header h1,
 header h3 {
     margin: 0;
+    letter-spacing: 2px;
 }
 header nav ul{
     display: flex;
@@ -43,6 +44,10 @@ header a {
 }
 header a:hover {
     color: #eee;
+}
+header a.active {
+    text-decoration: underline;
+    font-weight: bold;
 }
 .head {
     justify-self: flex-start;
@@ -65,9 +70,40 @@ article {
 article > * {
     width: 50%;
 }
+article h2::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 6px;
+    background-color: #0099ff;
+    margin-top: 5px;
+}
+article#lotr::before {
+    content: "Ulubione serie filmowe";
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-shadow: 0px 0px 6px black;
+}
+article#gory::before {
+    content: "Odwiedzone góry";
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-shadow: 0px 0px 6px black;
+}
 .image {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .image img {
     width: 100%;
