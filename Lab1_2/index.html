@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
     <title>Jakub Sroka</title>
 </head>
 <body>
     <header>
-        <h1>Jakub Sroka</h1>
-        <h3>IT System Administrator</h3>
+        <div class="head">
+            <h1>Jakub Sroka</h1>
+            <h3>IT System Administrator</h3>    
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Strona główna</a></li>
+                <li><a href="./filmy.html">Ulubione serie filmowe</a></li>
+                <li><a href="./gory.html">Odwiedzone góry</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./filmy.html">Ulubione serie filmowe</a></li>
-            <li><a href="./gory.html">Odwiedzone gory</a></li>
-        </ul>
-    </nav>
     <section>
         <article>
             <h2>Kilka słów o mnie</h2>
-            <p>Jestem absolwentem <b>Zespołu Szkół Elektronicznych w Rzeszowie</b> (<i>Technik informatyk</i>).</p>
-            <p>Aktualnie pracuję w Pratt & Whitney AeroPower Rzeszów oraz studiuję zaocznie.</p>
+            <div>
+                <p>Jestem absolwentem <b>Zespołu Szkół Elektronicznych w Rzeszowie</b> (<i>Technik informatyk</i>).</p>
+            </div>
         </article>
         <article>
             <h2>Moje wykształcenie</h2>
@@ -57,69 +63,90 @@
                 <li>Beskidy</li>
                 <li>Karkonosze</li>
                 <li>Góry świętokrzyskie</li>
-
-                <img src="./img/bieszczady.jpeg" alt="">
             </ul>
         </article>
+        <article class="image">
+            <img src="./img/bieszczady.jpeg" alt="Bieszczady">
+        </article>
         <article>
-            <table>
-                <tr>
-                    <td></td>
-                    <td rowspan="2"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td colspan="2" rowspan="2"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="2"></td>
-                    <td></td>
-                </tr>
-            </table>
-            <p>Tabela z zastosowaniem atrybutów <b>colspan</b> i <b>rowspan</b></p>
+            <h2>Tabela z zastosowaniem atrybutów <b>colspan</b> i <b>rowspan</b></h2>
+            <div id="emptyTable">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td rowspan="2"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td></td>
+                    </tr>
+                </table>    
+            </div>
         </article>
     </section>
-    <aside>
+    <section id="section2">
         <form action="" method="get">
-            <h3>Przykładowy formularz</h3>
-            <label for="imie">Imię:</label>
-            <input type="text" name="imie" id="imie">
-            <br>
 
-            <label for="nazwisko">Nazwisko:</label>
-            <input type="text" name="nazwisko" id="nazwisko">
-            <br>
+            <div class="formSection">
+                <h3>Przykładowy formularz</h3>
+                <div>
+                    <label for="imie">Imię:</label>
+                    <input type="text" name="imie" id="imie">
+                </div>
+                <div>
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" name="nazwisko" id="nazwisko">
+                </div>
+                <div>
+                    <label for="emai">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <input type="checkbox" name="zgoda" id="zgoda">
+                    <label for="zgoda">Akceptuję regulamin</label>    
+                </div>
+            </div>
 
-            <label for="emai">Email:</label>
-            <input type="email" name="email" id="email">
-            <br>
-
-            <input type="checkbox" name="zgoda" id="zgoda">
-            <label for="zgoda">Akceptuję regulamin</label>
-            <br>
-
-            <h3>Wybierz swój plan:</h3>
-            <label for="plan1">Plan 1:</label>
-            <input type="radio" name="plan1" id="plan1">
-            <br>
-            <label for="plan2">Plan 2:</label>
-            <input type="radio" name="plan2" id="plan2">
-            <br>
-            <label for="plan3">Plan 3:</label>
-            <input type="radio" name="plan3" id="plan3">
-            <br>
-
-            <input type="submit" value="Wyślij">
+            <div class="formSection">
+                <h3>Wybierz swój plan:</h3>
+                <div>
+                    <label for="plan1">Plan 1:</label>
+                    <input type="radio" name="plan" id="plan1">                        
+                </div>
+                <div>
+                    <label for="plan2">Plan 2:</label>
+                    <input type="radio" name="plan" id="plan2">
+                </div>
+                <div>
+                    <label for="plan3">Plan 3:</label>
+                    <input type="radio" name="plan" id="plan3">    
+                </div>
+            </div>
+            <div class="formSection">
+                <input type="submit" value="Wyślij">
+            </div>
         </form>
-    </aside>
+        <aside>
+            <h3>Menu boczne</h3>
+            <ul>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+        </aside>    
+    </section>
     <footer>
         <p>w67188</p>
     </footer>

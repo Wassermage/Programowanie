@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+h1 {
+    font-size: 50px;
+}
+h4 {
+    font-size: 30px;
+}
+header {
+    position: sticky;
+    height: 100%;
+    background-color: #0099ff;
+    color: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 2px #aaa;
+    padding: 20px 120px;
+    z-index: 1;
+}
+header h1,
+header h3 {
+    margin: 0;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+}
+header a:hover {
+    color: #eee;
+}
+.head {
+    justify-self: flex-start;
+}
+section,
+article {
+    display: block;
+    padding: 0;
+    font-size: 20px;
+}
+article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 120px;
+    border-bottom: 1px solid #ccc;
+}
+article > * {
+    width: 50%;
+}
+.image {
+    padding: 0;
+    margin: 0;
+}
+.image img {
+    width: 100%;
+}
+table,
+tr,
+th,
+td {
+    border: #0099ff 2px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+#emptyTable table {
+    height: 200px;
+    width: 100%;
+}
+#section2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 120px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+form {
+    border: #0099ff solid 2px;
+    border-radius: 6px;
+    padding: 30px 30px 0;
+    margin: 0;
+}
+form h3 {
+    margin: 0;
+    padding: 0 0 20px;
+}
+.formSection {
+    padding-bottom: 30px;
+}
+aside {
+    text-align: right;
+}
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
